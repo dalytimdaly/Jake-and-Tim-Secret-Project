@@ -13,7 +13,7 @@ Talking about some real Major Tom type shit.
 
 ### PITCH - Why choose Jake and Tim Secret Project?
 
-    People love the stars. We love the stars. We love imagery of stars. People love imagery of stars. Now imagine being able to see NASA's photo of the day from the comfor of your home. That is what we offer. We will take NASA free API to visualize their photo of the day so that people can like, comment and interact with this photo. We will create a search function that will allow users to look at previous images of the day in order to stoke their sense of wonder and inspire them to change their lives.
+    People love space. We love space. We love imagery of space. People love imagery of space. Now imagine being able to see photos from another planet from the comfort of your home. That is what we offer. We will take NASA free API to visualize their collection of photos from the Curiousity Rover so that people can like, comment and interact with these photos. We will create a search function that will allow users to look at previous images of the day in order to stoke their sense of wonder and inspire them to change their lives.
 
 
 ### USER Stories - Hear from people whose lives were changed after using our product
