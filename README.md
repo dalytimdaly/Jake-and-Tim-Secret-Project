@@ -1,15 +1,22 @@
 # Jake-and-Tim-Secret-Project
-This is an incredible project about space. It will allow you to leave this planet and explore the stars.
-Talking about some real Major Tom type shit.
+This is an incredible project about space. Have you ever wondered what raw, unfiltered photos from mars rovers have looked like? now you will know with our amazing project.
 
 
 ### Instalation Instructions 
+To use this application, you will have to 
+* clone this repo into your computers Terminal git@github.com:dalytimdaly/Jake-and-Tim-Secret-Project.git
+* open the repo in a new folder and launch a json server. json-server --watch db.json
+* 
 
 
 
 
 ### Requirments
-
+* Must be a HTML/CSS/JS frontend that accesses data from a public API
+* Entire app must run on a single page
+* App must include 3 event listeners that enable interactivity
+* App must use one instance of array iteration 
+* Code must be DRY
 
 ### PITCH - Why choose Jake and Tim Secret Project?
 
