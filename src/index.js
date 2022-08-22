@@ -50,14 +50,19 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     favorite.addEventListener('click', (event) => {
         event.preventDefault()
-        let currentData = newData
-        console.log(newData)
-        console.log(currentData)
-        currentData = parseInt(favoriteCount.textContent) + 1
-        console.log(currentData)
-        favoriteCount.textContent = `${currentData} FAVORITES`
-        //appendFavorite()
+        let selectedImage = currentImage
+        console.log(currentImage.src)
+        console.log(selectedImage.src)
+        favoriteCount.textContent = `${selectedImage.favorites} FAVORITES`
+        let favList = document.querySelector('#favorited')
+        let img = document.createElement('img')
+        img.width = 200
+        img.height = 100
+        console.log(selectedImage.src)
+        img.src = selectedImage.src
+        favList.appendChild(img);
     })
+
 
     // Search Database
 
@@ -79,26 +84,12 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         currentImage.src = nasaData[`${randomImgNumber}`].img_src
         displayId.textContent = `CURRENT IMAGE: #${randomImgNumber}`
     })
-
-   
+ 
 })
 
 
 
- // Append Favorite to Nav Bar
 
- function appendFavorite() {
-    let favList = document.querySelector('#favorited')
-    let img = document.createElement('img')
-    img.width = 200
-    img.height = 100
-    img.src = currentData.img_src
-    favList.appendChild(img);
-    img.addEventListener('click', () => {
-        currentImage.src = nasaData[`${img}`].img_src
-        displayId.textContent = `CURRENT IMAGE: #${img}`
-    })
-}
 
 
 
