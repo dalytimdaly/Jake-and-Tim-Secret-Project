@@ -12,62 +12,81 @@
 
     
     <h1 id="main-title">
+        
         <div class="column">
-          <span>Curioisity HUB</span>
+            <span>Curiousity HUB</span>
         </div>
        
-      </h1>
+    </h1>
   
-      <main class="two-columns">
+    <main class="two-columns">
   
-        <div>
-          <h3> <p>Welcome to curiousity HUB! Let your curiousity rove through our collection of beautiful photos.</p>
-            <p>Search a specific ID or take a chance and generate a random image from our database!</p></h3>
+    <div>
+        
+        <h3 id="subtitle"> 
+            <p>Welcome to Curiousity Hub! Let your curiousity rove through our collection of beautiful photos.</p>
+            <p>Search a specific ID or take a chance and generate a random image from our database!</p>
+        </h3>
 
-          <p id="p1">
-            We spent a lot of time on this website and we are very proud of our work. THanks for visiting, but please leave.
-        </p>
+         
   
-          <h2 id="exhibit-title">Current Exhibit Title Goes Here</h2>
-  
-          <button id="buy-tickets-button">FAVORITE</button>
-  
-          <p id="tickets-bought">0 FAVORITES</p>
-  
-          <p id="exhibit-description">Exhibit description goes here...</p>
-  
-          <h3>People are raving:</h3>
-  
-          <div class="comments-container">
-  
-            <div id="comments-section">
-              <!-- comments go here! -->
+        <h2 id="image-id">CURRENT IMAGE ID</h2>
+
+        <img id="current-image" src="" />
+
+        <div id="favorite">
+
+            <button id="favorite-button">FAVORITE</button>
+    
+            <p id="number-favorites">0 FAVORITES</p>
+          
+        </div>
+
+        <div id="comments">
+            <h3>Comments:</h3>
+    
+            <div class="comments-container">
+        
+            
+    
+                <form id="comment-form">
+                    <input type="text" name="comment-input" placeholder="Your Comment Here" id="commentInput">
+                    <input type="submit" value="Add Comment">
+                </form>
+
+                <div id="comments-section">
+                    <!-- comments go here! -->
+                </div>
+    
             </div>
-  
-            <form id="comment-form">
-  
-              <input type="text" name="comment-input" placeholder="Your Comment Here" id="commentInput">
-              <input type="submit" value="Add Comment">
-  
-            </form>
-  
-          </div>
-  
-        </div>
-  
-        <div>
-  
-          <img id="exhibit-image" src="#" alt="current exhibit image" />
-  
-        </div>
-  
-  
-      </main>
-  
-      <footer>Copyrite 2022 MoMFA</footer>
-   
 
+  
+        </div>
+
+        <div id="generate">
+
+            <button id="random-generate">NEW RANDOM IMAGE</button>
+          
+        </div>
+
+        <form id="search-form">
+
+            <input type="text" name="search-input" placeholder="Search Image ID Here" id="searchInput">
+            <input type="submit" value="Search Database">
+
+        </form>
+
+    </div> 
+
+    </main>
+
+    <section id="favorited">
+        <nav id="favorited-images">
+            <!--favorite images appended here-->
+        </nav>
+    </section>
 </body>
 
+<footer id="copyright">Copyrite 2022 Jake and Tim</footer>
 
 </html>

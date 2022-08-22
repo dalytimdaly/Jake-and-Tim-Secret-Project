@@ -1,0 +1,34 @@
+#main-title {
+    float: center;
+    margin-left: 42%;
+}
+
+#subtitle {
+    margin-left: 3%;
+    text-align: center;
+}
+
+#image-id {
+    margin-left: 39%;
+}
+
+#comments {
+    width: 200px;
+    text-align: center;
+    float: right;
+}
+
+#favorite {
+    text-align: center;
+    float: left;
+}
+
+#current-image {
+    width: 750px;
+    height: 800px;
+    margin-left: 20%;
+}
+
+#copyright {
+    margin-top: 10%;
+}
