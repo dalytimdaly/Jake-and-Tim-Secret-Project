@@ -21,14 +21,24 @@
 #favorite {
     text-align: center;
     float: left;
+    margin-left: 7%;
+
 }
 
 #current-image {
-    width: 750px;
-    height: 800px;
-    margin-left: 20%;
+    width: 850px;
+    height: 700px;
+    margin-left: 9%;
 }
 
 #copyright {
     margin-top: 10%;
+}
+
+#search {
+    margin-left: 50%;
+}
+
+#generate {
+    margin-left: 34%;
 }
