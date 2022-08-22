@@ -1,4 +1,5 @@
 let nasaData
+let currentData
 
 function general_fetch(url) {
     return fetch(url).then(res => { return res.json() })
@@ -9,6 +10,8 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     nasaData = data.photos
     console.log(nasaData[0])
+
+    console.log(nasaData.photos)
     
     let currentImage = document.getElementById('current-image')
 
@@ -45,9 +48,9 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     favorite.addEventListener('click', (event) => {
         event.preventDefault()
-        console.log("hi")
+        let currentData = nasaData
         favoriteCount.textContent = `${count ++} FAVORITES`
-
+        
     })
 
     // Search Database
@@ -73,6 +76,16 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
             loadDuck()
         })
     }
+
+
+      let newVotes = document.querySelector('#votes').value
+        currentCharacter.votes += parseInt(newVotes)
+        voteTally.textContent = currentCharacter.votes
+        voteForm.reset()
+        updateVotes(currentCharacter.votes)
+    })
+
+
 */
     
     
