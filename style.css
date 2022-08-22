@@ -15,23 +15,33 @@
 
 #image-id {
     margin-left: 39%;
+    background-color: black;
+    color: whitesmoke;
 }
 
 #comments {
     width: 200px;
     text-align: center;
     float: right;
+    background-color: black;
+    color: whitesmoke;
 }
 
 #favorite {
     text-align: center;
     float: left;
+    margin-left: 10%
+}
+
+#number-favorites {
+    background-color: black;
+    color: whitesmoke;
 }
 
 #current-image {
-    width: 750px;
-    height: 800px;
-    margin-left: 20%;
+    width: 900px;
+    height: 670px;
+    margin-left: 7%;
 }
 
 #copyright {
