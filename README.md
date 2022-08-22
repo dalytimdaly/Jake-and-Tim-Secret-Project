@@ -12,7 +12,11 @@ To use this application, you will have to
 
 
 ### Requirments
-
+* Must be a HTML/CSS/JS frontend that accesses data from a public API
+* Entire app must run on a single page
+* App must include 3 event listeners that enable interactivity
+* App must use one instance of array iteration 
+* Code must be DRY
 
 ### PITCH - Why choose Jake and Tim Secret Project?
 

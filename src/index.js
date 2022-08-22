@@ -47,7 +47,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         selectedImage.comments = newData.comments
         commentSection.appendChild(newComment)
         post.reset()
-        commentSection.reset()
 
     })  
 
