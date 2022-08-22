@@ -8,7 +8,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     console.log(data)
 
     nasaData = data.photos
-    console.log(nasaData[0])
+    // console.log(nasaData[0])
     
     let currentImage = document.getElementById('current-image')
 
@@ -75,7 +75,17 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     }
 */
     
-    
+// function to make the "GENERATE RANDOM IMAGE BUTTON" work
+function renderRandomImage(){
+    let randomImgButton = document.querySelector('#random-generate');
+    randomImgButton.addEventListener('click', (e) =>{
+        console.log(Math.floor(Math.random() * 856))
+        let randomImgNumber = Math.floor(Math.random() * 856)
+        currentImage.src = nasaData[`${randomImgNumber}`].img_src 
+    })
+}
+    renderRandomImage()
+
 })
 
 
