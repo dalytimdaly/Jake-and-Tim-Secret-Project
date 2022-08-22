@@ -83,6 +83,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         newFaveImg.addEventListener('click', () => {
             loadData(selectedImage)
         })
+    })
 
 
     // Search Database
@@ -107,11 +108,3 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     })
  
 })
-
-
-
-
-
-
-
-
