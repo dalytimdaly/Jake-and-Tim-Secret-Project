@@ -29,7 +29,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     let post = document.getElementById('comment-form')
     let commentSection = document.querySelector('#comments-section')
 
-    document.addEventListener('submit', (event) => {
+    post.addEventListener('submit', (event) => {
         event.preventDefault()
         let newComment = document.createElement('p')
         newComment.textContent = post['commentInput'].value
