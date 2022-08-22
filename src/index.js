@@ -1,5 +1,7 @@
 let nasaData
+let newData
 let currentData
+let selectedImage
 
 function general_fetch(url) {
     return fetch(url).then(res => { return res.json() })
@@ -8,18 +10,13 @@ function general_fetch(url) {
 general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=JKPUIJZAatGpCWnlTbfIK1WVS7sOxcMqERcI78jJ').then((data) => {
     console.log(data)
 
+    let nasaData
+    
+
     nasaData = data.photos
-
-    console.log(nasaData[0])
-
-    console.log(data.photos.keys())
 
     const newData = nasaData.map((nasaData) => {
     return Object.assign({}, nasaData, {"favorites": 0}, {"comments" : [{}]})})
-
-    console.log(newData)
-
-
 
     let currentImage = document.getElementById('current-image')
 
@@ -50,13 +47,16 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     let favorite = document.getElementById('favorite-button')
     let favoriteCount = document.getElementById('number-favorites')
-    let count = 1
 
     favorite.addEventListener('click', (event) => {
         event.preventDefault()
-        let currentData = nasaData
-        favoriteCount.textContent = `${count ++} FAVORITES`
-        
+        let currentData = newData
+        console.log(newData)
+        console.log(currentData)
+        currentData = parseInt(favoriteCount.textContent) + 1
+        console.log(currentData)
+        favoriteCount.textContent = `${currentData} FAVORITES`
+        //appendFavorite()
     })
 
     // Search Database
@@ -69,10 +69,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         currentImage.src = nasaData[`${searchItem}`].img_src  
         displayId.textContent = `CURRENT IMAGE: #${searchItem}`
     })
-
- 
-
-
     
 // function to make the "GENERATE RANDOM IMAGE BUTTON" work
 
@@ -83,31 +79,27 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         currentImage.src = nasaData[`${randomImgNumber}`].img_src
         displayId.textContent = `CURRENT IMAGE: #${randomImgNumber}`
     })
+
+   
 })
 
-// Append Favorite 
-
-/*
-    function appendFavorite() {
-        let duckList = document.querySelector('#duck-nav')
-        let img = document.createElement('img')
-        img.src = duck.img_url
-        duckList.appendChild(img);
-        img.addEventListener('click', () => {
-            loadDuck()
-        })
-    }
 
 
-      let newVotes = document.querySelector('#votes').value
-        currentCharacter.votes += parseInt(newVotes)
-        voteTally.textContent = currentCharacter.votes
-        voteForm.reset()
-        updateVotes(currentCharacter.votes)
+ // Append Favorite to Nav Bar
+
+ function appendFavorite() {
+    let favList = document.querySelector('#favorited')
+    let img = document.createElement('img')
+    img.width = 200
+    img.height = 100
+    img.src = currentData.img_src
+    favList.appendChild(img);
+    img.addEventListener('click', () => {
+        currentImage.src = nasaData[`${img}`].img_src
+        displayId.textContent = `CURRENT IMAGE: #${img}`
     })
+}
 
-
-*/
 
 
 
