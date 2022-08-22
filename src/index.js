@@ -20,30 +20,41 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     const newData = nasaData.map((nasaData) => {
     return Object.assign({}, nasaData, {"favorites": 0}, {"comments" : [{}]})})
 
+    console.log(newData)
+
+    newData.forEach(photo => {
+        createImages(photo)
+    })
+
     loadData(newData[0])
-    initialId()
     
 
 // Serious Functionality Below //
+
+    function createImages (photo) {
+        currentData = photo
+        let photoList = document.querySelector('#allimages')
+        let thumb = document.createElement('img')
+        thumb.src = photo['image_src']
+        photoList.appendChild(thumb);
+        thumb.addEventListener('click', () => {
+        loadData(photo);
+        })
+    }
 
 
     let currentImage = document.querySelector('#current-image')
     let displayId = document.getElementById('image-id')
 
-    function loadData(selectedImage) {
-        currentData = selectedImage
+    function loadData(photo) {
+        currentData = photo
         let displayId = document.getElementById('image-id')
         let image = document.querySelector('#current-image')
         let favoriteCount = document.getElementById('number-favorites')
     
-        displayId.textContent = `Current Image: #${selectedImage.id}`
-        image.setAttribute('src', selectedImage['img_src'])
-        favoriteCount.textContent = selectedImage['favorites']
-    }
-
-    function initialId () {
-        let displayId = document.getElementById('image-id')
-        displayId.textContent = "Current Image: #0"
+        displayId.textContent = `Current Image: #${photo.id}`
+        image.setAttribute('src', photo['img_src'])
+        favoriteCount.textContent = photo['favorites']
     }
 
     // comment section
@@ -56,7 +67,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let selectedImage = currentImage
         let newComment = document.createElement('p')
         newComment.textContent = post['commentInput'].value
-        //
         currentImage.comments = newComment.textContent
         console.log(currentImage.comments)
         console.log(selectedImage.comments)
@@ -68,6 +78,8 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     // favorite image
 
     let favorite = document.getElementById('favorite-button')
+
+    let favoriteCollection = [{}]
     
 
     favorite.addEventListener('click', (event) => {
@@ -76,12 +88,12 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let newFaveImg = document.createElement('img')
         newFaveImg.width = 200
         newFaveImg.height = 100
-        console.log(currentData)
-        console.log(selectedImage)
-        newFaveImg.src = selectedImage.img_src
+        newFaveImg.src = currentData.img_src
         favList.appendChild(newFaveImg);
+        favoriteCollection.push(newFaveImg)
         newFaveImg.addEventListener('click', () => {
-            loadData(selectedImage)
+            loadData(newFaveImg)
+            console.log(newFaveImg)
         })
     })
 
@@ -106,5 +118,8 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         currentImage.src = nasaData[`${randomImgNumber}`].img_src
         displayId.textContent = `CURRENT IMAGE: #${randomImgNumber}`
     })
+
+
  
 })
+
