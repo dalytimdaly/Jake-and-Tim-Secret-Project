@@ -12,23 +12,26 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     console.log(nasaData[0])
 
-    console.log(nasaData.photos)
+    console.log(data.photos.keys())
 
-    nasaData.forEach(object) {
-        Object.assign
-    }
-    
+    const newData = nasaData.map((nasaData) => {
+    return Object.assign({}, nasaData, {"favorites": 0}, {"comments" : [{}]})})
+
+    console.log(newData)
+
+
+
     let currentImage = document.getElementById('current-image')
 
     function createImage() {
-        currentImage.src = nasaData[0].img_src
+        currentImage.src = newData[0].img_src
     }
 
     createImage()
 
     let displayId = document.getElementById('image-id')
 
-    displayId.textContent = `CURRENT IMAGE: #${nasaData[0].id}`
+    displayId.textContent = `CURRENT IMAGE: #0`
 
     // comment section
 
@@ -64,10 +67,25 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         e.preventDefault()
         searchItem = e.target.searchInput.value
         currentImage.src = nasaData[`${searchItem}`].img_src  
-        displayId.textContent = `CURRENT IMAGE: #${nasaData[`${searchItem}`].id}`
+        displayId.textContent = `CURRENT IMAGE: #${searchItem}`
     })
 
-    // Append Favorite 
+ 
+
+
+    
+// function to make the "GENERATE RANDOM IMAGE BUTTON" work
+
+    let randomImgButton = document.querySelector('#random-generate');
+        
+    randomImgButton.addEventListener('click', (e) =>{
+        let randomImgNumber = Math.floor(Math.random() * 856)
+        currentImage.src = nasaData[`${randomImgNumber}`].img_src
+        displayId.textContent = `CURRENT IMAGE: #${randomImgNumber}`
+    })
+})
+
+// Append Favorite 
 
 /*
     function appendFavorite() {
@@ -90,19 +108,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
 
 */
-    
-// function to make the "GENERATE RANDOM IMAGE BUTTON" work
-function renderRandomImage(){
-    let randomImgButton = document.querySelector('#random-generate');
-    randomImgButton.addEventListener('click', (e) =>{
-        console.log(Math.floor(Math.random() * 856))
-        let randomImgNumber = Math.floor(Math.random() * 856)
-        currentImage.src = nasaData[`${randomImgNumber}`].img_src 
-    })
-}
-    renderRandomImage()
-
-})
 
 
 
