@@ -53,6 +53,8 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     
 })
 
+// Append Favorite 
+
 /*
     function appendFavorite() {
         let duckList = document.querySelector('#duck-nav')
@@ -63,6 +65,11 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
             loadDuck()
         })
     }
-
-
 */
+// Search Database
+
+    let searchBtn = document.querySelector('searchInput')
+
+    searchBtn.addEventListener('submit', () => {
+        
+    })
