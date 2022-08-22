@@ -37,9 +37,17 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     post.addEventListener('submit', (event) => {
         event.preventDefault()
+        let selectedImage = currentImage
         let newComment = document.createElement('p')
         newComment.textContent = post['commentInput'].value
+        //
+        currentImage.comments = newComment.textContent
+        console.log(currentImage.comments)
+        console.log(selectedImage.comments)
+        selectedImage.comments = newData.comments
         commentSection.appendChild(newComment)
+        post.reset()
+        commentSection.reset()
 
     })  
 
@@ -51,14 +59,14 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     favorite.addEventListener('click', (event) => {
         event.preventDefault()
         let selectedImage = currentImage
-        console.log(currentImage.src)
-        console.log(selectedImage.src)
+        // console.log(currentImage.src)
+        // console.log(selectedImage.src)
         favoriteCount.textContent = `${selectedImage.favorites} FAVORITES`
         let favList = document.querySelector('#favorited')
         let img = document.createElement('img')
         img.width = 200
         img.height = 100
-        console.log(selectedImage.src)
+        // console.log(selectedImage.src)
         img.src = selectedImage.src
         favList.appendChild(img);
     })

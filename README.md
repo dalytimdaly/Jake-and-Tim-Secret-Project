@@ -3,6 +3,10 @@ This is an incredible project about space. Have you ever wondered what raw, unfi
 
 
 ### Instalation Instructions 
+To use this application, you will have to 
+* clone this repo into your computers Terminal git@github.com:dalytimdaly/Jake-and-Tim-Secret-Project.git
+* open the repo in a new folder and launch a json server. json-server --watch db.json
+* 
 
 
 
