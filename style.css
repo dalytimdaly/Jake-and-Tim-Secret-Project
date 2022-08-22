@@ -1,12 +1,17 @@
 #main-title {
     float: center;
     margin-left: 42%;
+    background-color: black;
+    color: whitesmoke;
 }
 
 #subtitle {
     margin-left: 3%;
     text-align: center;
+    background-color: black;
+    color: whitesmoke;
 }
+
 
 #image-id {
     margin-left: 39%;
@@ -21,14 +26,12 @@
 #favorite {
     text-align: center;
     float: left;
-    margin-left: 7%;
-
 }
 
 #current-image {
-    width: 850px;
-    height: 700px;
-    margin-left: 9%;
+    width: 750px;
+    height: 800px;
+    margin-left: 20%;
 }
 
 #copyright {
@@ -36,14 +39,15 @@
 }
 
 #search {
-    margin-left: 50%;
+    margin-left: 50%
 }
 
 #generate {
     margin-left: 34%;
 }
 
-/* body {
-    background-image: url("https://i.pinimg.com/originals/17/82/23/178223c0e273b8cc233ab4830c33c90f.jpg");
-   } */
 
+
+body {
+    background-image: url("https://i.pinimg.com/originals/17/82/23/178223c0e273b8cc233ab4830c33c90f.jpg");
+   }
