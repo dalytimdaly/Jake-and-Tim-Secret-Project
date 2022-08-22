@@ -49,11 +49,19 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         favoriteCount.textContent = `${count ++} FAVORITES`
 
     })
-    
-    
-})
 
-// Append Favorite 
+    // Search Database
+
+    let searchBtn = document.querySelector('#search-form')
+
+    searchBtn.addEventListener('submit', (e) => {
+        e.preventDefault()
+        searchItem = e.target.searchInput.value
+        currentImage.src = nasaData[`${searchItem}`].img_src  
+        displayId.textContent = `CURRENT IMAGE: #${nasaData[`${searchItem}`].id}`
+    })
+
+    // Append Favorite 
 
 /*
     function appendFavorite() {
@@ -66,10 +74,9 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         })
     }
 */
-// Search Database
+    
+    
+})
 
-    let searchBtn = document.querySelector('searchInput')
 
-    searchBtn.addEventListener('submit', () => {
-        
-    })
+
