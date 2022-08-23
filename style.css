@@ -67,6 +67,7 @@ body {
     float: right;
     width: 250px;
     height: 600px;
+    background-color: rgba(24, 28, 56, 0.074);
 }
 
 #search-form {
