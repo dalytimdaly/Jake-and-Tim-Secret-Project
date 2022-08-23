@@ -1,3 +1,7 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/17/82/23/178223c0e273b8cc233ab4830c33c90f.jpg");
+   }
+
 #main-title {
     float: center;
     margin-left: 42%;
@@ -15,14 +19,6 @@
 
 #image-id {
     margin-left: 39%;
-    background-color: black;
-    color: whitesmoke;
-}
-
-#comments {
-    width: 200px;
-    text-align: center;
-    float: right;
     background-color: black;
     color: whitesmoke;
 }
@@ -59,12 +55,6 @@
 #random-generate{
     position: relative;
 }
-
-
-
-body {
-    background-image: url("https://i.pinimg.com/originals/17/82/23/178223c0e273b8cc233ab4830c33c90f.jpg");
-   }
 
 #favorited {
     float: left

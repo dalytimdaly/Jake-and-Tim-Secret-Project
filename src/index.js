@@ -18,7 +18,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     nasaData = data.photos
 
     console.log(nasaData)
-
     
 
     loadData(nasaData[0])
@@ -51,24 +50,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         displayId.textContent = `Current Image: #${photo.id}`
         currentImage.setAttribute('src', photo['img_src'])
     }
-
-    // comment section
-
-    let post = document.getElementById('comment-form')
-    let commentSection = document.querySelector('#comments-section')
-
-    post.addEventListener('submit', (event) => {
-        event.preventDefault()
-        let selectedImage = currentImage
-        let newComment = document.createElement('p')
-        newComment.textContent = post['commentInput'].value
-        currentImage.comments = newComment.textContent
-        console.log(currentImage.comments)
-        console.log(selectedImage.comments)
-        selectedImage.comments = newData.comments
-        commentSection.appendChild(newComment)
-        post.reset()
-    })
 
     // favorite image
 
