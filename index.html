@@ -21,53 +21,53 @@
   
     <main class="three columns">
   
-    <div>
+        <div>
+            
+            <h3 id="subtitle"> 
+                <p>Welcome to Curiousity Hub! Let your curiousity rove through our collection of beautiful photos.</p>
+                <p>Search a specific ID or take a chance and generate a random image from our database!</p>
+            </h3>
+
+            <div id="generate">
+
+                <button id="random-generate">Retrieve Random Image</button>
+
+                <form id="search-form">
+
+                    <input type="text" name="search-input" placeholder="# Between 0 and 855" id="searchInput">
+                    <input type="submit" value="Search Database">
         
-        <h3 id="subtitle"> 
-            <p>Welcome to Curiousity Hub! Let your curiousity rove through our collection of beautiful photos.</p>
-            <p>Search a specific ID or take a chance and generate a random image from our database!</p>
-        </h3>
+                </form>
+            
+            </div>
 
-        <div id="generate">
+            <div id="allimages" class="column">Image Library:
 
-            <button id="random-generate">Retrieve Random Image</button>
-
-            <form id="search-form">
-
-                <input type="text" name="search-input" placeholder="# Between 0 and 855" id="searchInput">
-                <input type="submit" value="Search Database">
+                <div></div>
+                <div></div>
+            </div>
     
-            </form>
-          
-        </div>
+            <h2 id="image-id">CURRENT IMAGE ID</h2>
 
-        <div id="allimages" class="column">Image Library:
+            <img id="current-image" src="" />
 
-            <div></div>
-            <div></div>
-        </div>
-  
-        <h2 id="image-id">CURRENT IMAGE ID</h2>
+            <div id="favorite" class="column">
 
-        <img id="current-image" src="" />
+                <button id="favorite-button">FAVORITE</button>
+        
+                <section id="favorited"> 
+                    <div id="favoritedimages">Favorite Images:</div>
 
-        <div id="favorite" class="column">
+                    <nav id="favorited-images" class="column">
+                        
+                        
+                        <!--favorite images appended here-->
+                    </nav>
+                </section>
+            
+            </div>
 
-            <button id="favorite-button">FAVORITE</button>
-    
-            <section id="favorited"> 
-                <div id="favoritedimages">Favorite Images:</div>
-
-                <nav id="favorited-images" class="column">
-                    
-                    
-                    <!--favorite images appended here-->
-                </nav>
-            </section>
-          
-        </div>
-
-    </div> 
+        </div> 
 
     </main>
 
