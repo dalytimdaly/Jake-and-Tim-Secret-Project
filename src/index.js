@@ -75,7 +75,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         })
     })
 
-
     // Search Database
 
     let searchBtn = document.querySelector('#search-form')
