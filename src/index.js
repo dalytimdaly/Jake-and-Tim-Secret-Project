@@ -15,13 +15,26 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     nasaData = data.photos
 
-    const newData = nasaData.map((nasaData) => {
-    return Object.assign({}, nasaData, {"favorites": 0}, {"comments" : [{}]})})
+    console.log(nasaData)
 
-    let currentImage = document.getElementById('current-image')
+    
 
-    function createImage() {
-        currentImage.src = newData[0].img_src
+    loadData(nasaData[0])
+    
+
+// Serious Functionality Below //
+
+    function createImages (photo) {
+        currentData = photo
+        let photoList = document.querySelector('#allimages')
+        let thumb = document.createElement('img')
+        thumb.height = "20"
+        thumb.width = "35"
+        thumb.src = photo.image_src
+        photoList.appendChild(thumb);
+        thumb.addEventListener('click', () => {
+        loadData(photo);
+        })
     }
 
     createImage()
