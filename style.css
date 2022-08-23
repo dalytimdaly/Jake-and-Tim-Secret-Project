@@ -1,6 +1,6 @@
 body {
     background-image: url("https://i.pinimg.com/originals/17/82/23/178223c0e273b8cc233ab4830c33c90f.jpg");
-   }
+}
 
 #main-title {
     float: center;
@@ -19,48 +19,70 @@ body {
 
 #image-id {
     margin-left: 39%;
-    background-color: black;
+    text-shadow: black;
     color: whitesmoke;
 }
 
 #favorite {
     text-align: center;
     float: left;
-    margin-left: 10%
+    margin-left: 5%;
+    width: 205px;
+    height: 600px;
 }
 
-#number-favorites {
-    background-color: black;
+#favorited {
     color: whitesmoke;
+    margin-left: 1%;
+    float: left;
 }
+
+#favorite-button {
+    float: left;
+    margin-left: 32%;
+}
+
+#favoritedimages {
+    float: left;
+    margin-left: 2%;
+    width: 200px
+}
+
 
 #current-image {
     width: 900px;
     height: 670px;
-    margin-left: 7%;
+    float: center;
+    padding: 20px
+}
+
+#allimages {
+    color: whitesmoke;
+    margin-top: 5%;
+    text-align: center;
+    float: right;
+    
+    width: 250px;
+    height: 600px;
 }
 
 #copyright {
     margin-top: 10%;
 }
 
-#search {
-    margin-left: 50%
+#search-form {
+    margin-left: 30%;
+    float: center;
 }
 
 #generate {
     margin-left: 34%;
+    float: center;
 }
 
 #random-generate{
     position: relative;
 }
-
-
-
-body {
-    background-image: url("https://i.pinimg.com/originals/17/82/23/178223c0e273b8cc233ab4830c33c90f.jpg");
-   }
 
 #favorited {
     float: left

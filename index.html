@@ -13,13 +13,13 @@
     
     <h1 id="main-title">
         
-        <div class="column">
+        <div>
             <span>Curiousity HUB</span>
         </div>
        
     </h1>
   
-    <main class="two-columns">
+    <main class="three columns">
   
     <div>
         
@@ -30,45 +30,47 @@
 
         <div id="generate">
 
-            <button id="random-generate">GENERATE RANDOM IMAGE</button>
+            <button id="random-generate">Retrieve Random Image</button>
+
+            <form id="search-form">
+
+                <input type="text" name="search-input" placeholder="# Between 0 and 855" id="searchInput">
+                <input type="submit" value="Search Database">
+    
+            </form>
           
         </div>
 
-        <div id="search">
+        <div id="allimages" class="column">Image Library:
 
-        <form id="search-form">
-
-            <input type="text" name="search-input" placeholder="# Between 0 and 855" id="searchInput">
-            <input type="submit" value="Search Database">
-
-        </form>
-
+            <div></div>
+            <div></div>
         </div>
   
         <h2 id="image-id">CURRENT IMAGE ID</h2>
 
         <img id="current-image" src="" />
 
-        <div id="favorite">
+        <div id="favorite" class="column">
 
             <button id="favorite-button">FAVORITE</button>
     
-            <p id="number-favorites">0 FAVORITES</p>
+            <section id="favorited"> <div id="favoritedimages">Favorite Images:</div>
+                <div></div>
+                <div></div>
+                <nav id="favorited-images" class="column">
+                    
+                    
+                    <!--favorite images appended here-->
+                </nav>
+            </section>
           
         </div>
-
-
-       
 
     </div> 
 
     </main>
 
-    <section id="favorited">
-        <nav id="favorited-images">
-            <!--favorite images appended here-->
-        </nav>
-    </section>
 </body>
 
 <footer id="copyright">Copyright 2022 Jake and Tim</footer>

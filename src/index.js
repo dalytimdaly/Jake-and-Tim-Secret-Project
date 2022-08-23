@@ -19,19 +19,21 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     console.log(nasaData)
     
+    nasaData.forEach(photo => {
+        createImages(photo)
+    })
 
     loadData(nasaData[0])
     
-
 // Serious Functionality Below //
 
     function createImages (photo) {
         currentData = photo
         let photoList = document.querySelector('#allimages')
         let thumb = document.createElement('img')
-        thumb.height = "20"
-        thumb.width = "35"
-        thumb.src = photo.image_src
+        thumb.height = "10"
+        thumb.width = "15"
+        thumb.src = photo['img_src']
         photoList.appendChild(thumb);
         thumb.addEventListener('click', () => {
         loadData(photo);
@@ -47,7 +49,8 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let displayId = document.getElementById('image-id')
         let currentImage = document.querySelector('#current-image')
     
-        displayId.textContent = `Current Image: #${photo.id}`
+        displayId.textContent = `Current Image: #${photo['index']}`
+        console.log(photo['index'])
         currentImage.setAttribute('src', photo['img_src'])
     }
 
@@ -64,14 +67,13 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let newFaveImg = document.createElement('img')
         newFaveImg.src = currentData.img_src
         Object.assign(newFaveImg, {"id": currentData.id}, {"img_src": currentData.img_src})
-        newFaveImg.width = 200
+        newFaveImg.width = 100
         newFaveImg.height = 100
         console.log(newFaveImg)
         favList.appendChild(newFaveImg);
         favoriteCollection.push(newFaveImg)
         newFaveImg.addEventListener('click', () => {
             loadData(newFaveImg)
-            console.log(newFaveImg)
         })
     })
 
@@ -84,7 +86,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         searchItem = e.target.searchInput.value
         currentImage.src = nasaData[`${searchItem}`].img_src 
         currentData.img_src = nasaData[`${searchItem}`].img_src 
-        displayId.textContent = `Current Image: # ${nasaData[searchItem].id}`
+        displayId.textContent = `Current Image: # ${searchItem}`
     })
     
 // function to make the "GENERATE RANDOM IMAGE BUTTON" work
@@ -95,7 +97,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let randomImgNumber = Math.floor(Math.random() * 856)
         currentImage.src = nasaData[`${randomImgNumber}`].img_src
         currentData.img_src = nasaData[`${randomImgNumber}`].img_src
-        displayId.textContent = `Current Image: #${nasaData[randomImgNumber].id}`
+        displayId.textContent = `Current Image: #${randomImgNumber}`
     })
 
 })
