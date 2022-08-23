@@ -10,58 +10,38 @@
 </head>
 <body>
 
-    
     <h1 id="main-title">
-        
         <div class="column">
             <span>Curiousity HUB</span>
         </div>
-       
     </h1>
   
     <main class="two-columns">
-  
-    <div>
-        
-        <h3 id="subtitle"> 
+        <div>
+
+            <h3 id="subtitle"> 
             <p>Welcome to Curiousity Hub! Let your curiousity rove through our collection of beautiful photos.</p>
             <p>Search a specific ID or take a chance and generate a random image from our database!</p>
-        </h3>
+            </h3>
 
-        <div id="generate">
+            <div id="generate">
+                <button id="random-generate">GENERATE RANDOM IMAGE</button>
+            </div>
 
-            <button id="random-generate">GENERATE RANDOM IMAGE</button>
-          
-        </div>
-
-        <div id="search">
-
-        <form id="search-form">
-
-            <input type="text" name="search-input" placeholder="# Between 0 and 855" id="searchInput">
-            <input type="submit" value="Search Database">
-
-        </form>
-
-        </div>
+            <div id="search">
+                <form id="search-form">
+                    <input type="text" name="search-input" placeholder="# Between 0 and 855" id="searchInput">
+                    <input type="submit" value="Search Database">
+                </form>
+            </div>
   
-        <h2 id="image-id">CURRENT IMAGE ID</h2>
-
-        <img id="current-image" src="" />
-
-        <div id="favorite">
-
-            <button id="favorite-button">FAVORITE</button>
-    
-            <p id="number-favorites">0 FAVORITES</p>
-          
-        </div>
-
-
-       
-
-    </div> 
-
+            <h2 id="image-id">CURRENT IMAGE ID</h2>
+            <img id="current-image" src=""/>
+            <div id="favorite">
+                <button id="favorite-button">FAVORITE</button>
+                <p id="number-favorites">0 FAVORITES</p>
+            </div>
+        </div> 
     </main>
 
     <section id="favorited">
