@@ -69,8 +69,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         Object.assign(newFaveImg, {"id": currentData.id}, {"img_src": currentData.img_src})
         newFaveImg.width = 100
         newFaveImg.height = 100
-        newFaveImg.width = 200
-        newFaveImg.height = 200
         console.log(newFaveImg)
         favList.appendChild(newFaveImg);
         favoriteCollection.push(newFaveImg)
