@@ -13,8 +13,8 @@
     
     <h1 id="main-title">
         
-        <div>
-            <span>Curiousity HUB</span>
+        <div class="curiosity-hub">
+            <span>Curiosity HUB</span>
         </div>
        
     </h1>
@@ -27,12 +27,12 @@
                 <p>Welcome to Curiousity Hub! Let your curiousity rove through our collection of beautiful photos.</p>
                 <p>Search a specific ID or take a chance and generate a random image from our database!</p>
             </h3>
+                
+            <div id="generate" class="parent">
 
-            <div id="generate">
+                <button id="random-generate" class="child">Retrieve Random Image</button>
 
-                <button id="random-generate">Retrieve Random Image</button>
-
-                <form id="search-form">
+                <form id="search-form" class="child">
 
                     <input type="text" name="search-input" placeholder="# Between 0 and 855" id="searchInput">
                     <input type="submit" value="Search Database">

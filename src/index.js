@@ -87,6 +87,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         currentImage.src = nasaData[`${searchItem}`].img_src 
         currentData.img_src = nasaData[`${searchItem}`].img_src 
         displayId.textContent = `Current Image: # ${searchItem}`
+        searchBtn.reset()
     })
     
 // function to make the "GENERATE RANDOM IMAGE BUTTON" work
