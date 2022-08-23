@@ -49,7 +49,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let displayId = document.getElementById('image-id')
         let currentImage = document.querySelector('#current-image')
     
-        displayId.textContent = `Current Image: #${photo['index']}`
+        displayId.textContent = `Current Image: #${photo['id']}`
         console.log(photo['index'])
         currentImage.setAttribute('src', photo['img_src'])
     }
@@ -86,7 +86,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         searchItem = e.target.searchInput.value
         currentImage.src = nasaData[`${searchItem}`].img_src 
         currentData.img_src = nasaData[`${searchItem}`].img_src 
-        displayId.textContent = `Current Image: # ${searchItem}`
+        displayId.textContent = `Current Image: # ${nasaData[searchItem].id}`
         searchBtn.reset()
     })
     
@@ -98,7 +98,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let randomImgNumber = Math.floor(Math.random() * 856)
         currentImage.src = nasaData[`${randomImgNumber}`].img_src
         currentData.img_src = nasaData[`${randomImgNumber}`].img_src
-        displayId.textContent = `Current Image: #${randomImgNumber}`
+        displayId.textContent = `Current Image: # ${nasaData[randomImgNumber].id}`
     })
 
 })
