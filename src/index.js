@@ -60,7 +60,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
 
     let favoriteCollection = [{}]
     
-
     favorite.addEventListener('click', (event) => {
         event.preventDefault()
         let favList = document.querySelector('#favorited')
@@ -70,7 +69,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         newFaveImg.width = 100
         newFaveImg.height = 100
         newFaveImg.setAttribute("class", "newimage")
-        console.log(newFaveImg)
         favList.appendChild(newFaveImg);
         favoriteCollection.push(newFaveImg)
         newFaveImg.addEventListener('click', () => {
@@ -87,6 +85,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         searchItem = e.target.searchInput.value
         currentImage.src = nasaData[`${searchItem}`].img_src 
         currentData.img_src = nasaData[`${searchItem}`].img_src 
+        currentData.id = nasaData[`${searchItem}`].id
         displayId.textContent = `Current Image: # ${nasaData[searchItem].id}`
         searchBtn.reset()
     })
@@ -96,20 +95,21 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     let randomImgButton = document.querySelector('#random-generate');
         
     randomImgButton.addEventListener('click', (e) =>{
-        e.preventDefault(e)
+        e.preventDefault()
         let randomImgNumber = Math.floor(Math.random() * 856)
         currentImage.src = nasaData[`${randomImgNumber}`].img_src
         currentData.img_src = nasaData[`${randomImgNumber}`].img_src
+        currentData.id = nasaData[`${randomImgNumber}`].id
         displayId.textContent = `Current Image: # ${nasaData[randomImgNumber].id}`
     })
 
     let partyMode = document.getElementById('copyright')
 
-    /*
+  
     partyMode.addEventListener('click', () => {
-       let partyTime = document.createElement('img')
+
+       alert('Our lawyers have logged your IP address.')
 
     })
-    */
 })
 
