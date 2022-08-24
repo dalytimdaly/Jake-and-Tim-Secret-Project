@@ -96,6 +96,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
     let randomImgButton = document.querySelector('#random-generate');
         
     randomImgButton.addEventListener('click', (e) =>{
+        e.preventDefault(e)
         let randomImgNumber = Math.floor(Math.random() * 856)
         currentImage.src = nasaData[`${randomImgNumber}`].img_src
         currentData.img_src = nasaData[`${randomImgNumber}`].img_src
