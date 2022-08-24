@@ -72,7 +72,7 @@ body {
     margin-top: 5%;
     text-align: center;
     float: right;
-    width: 250px;
+    width: 25%;
     height: 600px;
     background-color: rgba(24, 28, 56, 0.074);
 }
@@ -84,11 +84,6 @@ body {
 
 #generate {
     float: center;
-}
-
-#allimages{
-    width: 25%;
-    text-size-adjust: large;
 }
 
 #favorited {
@@ -121,6 +116,4 @@ body {
 #favorite.column{    
     position: absolute;
     top: 360px
-    
-
 }
