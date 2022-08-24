@@ -69,7 +69,7 @@ body {
 
 #allimages {
     color: whitesmoke;
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
     float: right;
     width: 25%;
@@ -115,5 +115,9 @@ body {
 
 #favorite.column{    
     position: absolute;
-    top: 360px
+    top: 300px
+}
+
+#imglibh3 {
+    text-size-adjust: large;
 }
