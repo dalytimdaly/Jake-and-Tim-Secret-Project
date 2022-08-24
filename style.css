@@ -64,7 +64,7 @@ body {
     width: 900px;
     height: 670px;
     padding: 20px;
-    margin-left: 3%;
+    margin-left: 20%;
 }
 
 #allimages {
@@ -116,4 +116,11 @@ body {
 
 .imgLibClass {
     padding: 2px;
+}
+
+#favorite.column{    
+    position: absolute;
+    top: 360px
+    
+
 }
