@@ -33,6 +33,7 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let thumb = document.createElement('img')
         thumb.height = "10"
         thumb.width = "15"
+        thumb.setAttribute("class", "imgLibClass")
         thumb.src = photo['img_src']
         photoList.appendChild(thumb);
         thumb.addEventListener('click', () => {
@@ -102,5 +103,13 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         displayId.textContent = `Current Image: # ${nasaData[randomImgNumber].id}`
     })
 
+    let partyMode = document.getElementById('copyright')
+
+    /*
+    partyMode.addEventListener('click', () => {
+       let partyTime = document.createElement('img')
+
+    })
+    */
 })
 
