@@ -51,7 +51,6 @@ general_fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?s
         let currentImage = document.querySelector('#current-image')
     
         displayId.textContent = `Current Image: #${photo['id']}`
-        console.log(photo['index'])
         currentImage.setAttribute('src', photo['img_src'])
     }
 
