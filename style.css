@@ -46,7 +46,6 @@ body {
     margin-left: 34%;
     height: 45px;
     width: 80px;
-
 }
 
 #favoritedimages {
@@ -69,10 +68,10 @@ body {
 
 #allimages {
     color: whitesmoke;
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
     float: right;
-    width: 250px;
+    width: 25%;
     height: 600px;
     background-color: rgba(24, 28, 56, 0.074);
 }
@@ -86,9 +85,6 @@ body {
     float: center;
 }
 
-#allimages{
-    width: 25%;
-}
 
 #favorited {
     float: left
@@ -120,6 +116,4 @@ body {
 #favorite.column{    
     position: absolute;
     top: 360px
-    
-
 }
